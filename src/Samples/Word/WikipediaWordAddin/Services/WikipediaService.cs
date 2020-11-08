@@ -9,9 +9,20 @@ namespace WikipediaWordAddin.Services
     {
         public SearchResults Search(string search)
         {
-            var request = WebRequest.Create("http://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + HttpUtility.UrlEncode(search.Trim()));
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls | System.Net.SecurityProtocolType.Tls11 | System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Ssl3;
 
-            var response = request.GetResponse();
+            var request = WebRequest.Create("https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + HttpUtility.UrlEncode(search.Trim()));
+
+            WebResponse response;
+            try
+            {
+                response = request.GetResponse();
+
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
 
             string json;
 

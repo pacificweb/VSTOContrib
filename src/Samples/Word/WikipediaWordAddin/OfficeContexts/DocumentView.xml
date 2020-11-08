@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+<customUI onLoad="Ribbon_Load" 
+          xmlns="http://schemas.microsoft.com/office/2006/01/customui"
+          xmlns:ns="PacificWeb.IndexMoi">
   <ribbon>
     <tabs>
-      <tab idMso="TabView">
+      <tab idQ="ns:tabPacificWeb" label="INDEX">
         <group id="wikipediaGroup" label="Wikipedia" getVisible="RibbonVisible">
           <toggleButton id="showWikipediaPaneButton" onAction="PanelShown" getPressed="PanelShown" label="Show" showImage="false" />
         </group>
