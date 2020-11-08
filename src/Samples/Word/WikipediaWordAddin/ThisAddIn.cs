@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows;
-using Microsoft.Office.Core;
 using VSTOContrib.Autofac;
 using VSTOContrib.Core;
 using VSTOContrib.Word.RibbonFactory;
+using Office = Microsoft.Office.Core;
 
 namespace WikipediaWordAddin
 {
@@ -17,7 +17,8 @@ namespace WikipediaWordAddin
         {
         }
 
-        protected override IRibbonExtensibility CreateRibbonExtensibilityObject()
+
+        protected override Office.IRibbonExtensibility CreateRibbonExtensibilityObject()
         {
             //Required for WPF support
             if (System.Windows.Application.Current == null)
@@ -32,6 +33,8 @@ namespace WikipediaWordAddin
             };
         }
 
+        #region VSTO generated code
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -41,5 +44,7 @@ namespace WikipediaWordAddin
             Startup += ThisAddInStartup;
             Shutdown += ThisAddInShutdown;
         }
+
+        #endregion
     }
 }
