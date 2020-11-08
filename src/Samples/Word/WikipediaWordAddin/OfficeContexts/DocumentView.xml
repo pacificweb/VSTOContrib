@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <customUI onLoad="Ribbon_Load" 
           xmlns="http://schemas.microsoft.com/office/2006/01/customui"
-          xmlns:ns="VSTOContrib.Indexer">
+          xmlns:ns="VSTOContrib.Wikipedia">
   <ribbon>
     <tabs>
-      <tab idQ="ns:tabVSTOContrib" label="Indexer">
+      <tab idQ="ns:tabVSTOContrib" label="Wikipedia">
         <group id="wikipediaGroup" label="Wikipedia" getVisible="RibbonVisible">
           <toggleButton id="showWikipediaPaneButton" onAction="PanelShown" getPressed="PanelShown" label="Show" showImage="false" />
         </group>

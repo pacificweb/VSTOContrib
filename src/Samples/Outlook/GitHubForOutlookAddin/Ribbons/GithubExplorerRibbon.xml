@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<customUI onLoad="Ribbon_Load" loadImage="GetImage" xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+<customUI onLoad="Ribbon_Load" 
+          xmlns="http://schemas.microsoft.com/office/2006/01/customui"
+          xmlns:ns="VSTOContrib.GitHub">
   <ribbon>
     <tabs>
-      <tab idMso="TabMail">
+      <tab idQ="ns:tabVSTOContrib" label="GitHub">
         <group id="githubGroup" label="GitHub">
           <button id="createTask"
                   label="Create Issue"
